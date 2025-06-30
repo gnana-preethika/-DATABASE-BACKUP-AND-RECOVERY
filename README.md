@@ -24,4 +24,5 @@ After simulating the failure, the recovery process is initiated. The orders tabl
 Finally, a SELECT * FROM orders; query is run to verify that the data has been successfully restored. If all steps were followed correctly, the table will contain the same three original records, proving that the backup and recovery process worked effectively.
 
 This task serves as an essential example for understanding the importance of regular database backups and the ability to restore systems quickly during emergencies. It reinforces database administration concepts such as disaster recovery planning, data durability, and operational continuity. The approach taken here is simplified for learning purposes but captures the essence of a real-world backup and recovery strategy using SQL.
-
+OUTPUT:
+![Image](https://github.com/user-attachments/assets/9bfdc92c-4f0b-4444-9710-b311481731b0)
