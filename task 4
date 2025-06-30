@@ -1,0 +1,35 @@
+-- Step 0: Clean up if re-running
+DROP TABLE IF EXISTS orders;
+
+-- Step 1: Create the orders table (production data)
+CREATE TABLE orders (
+    order_id INT,
+    customer_name VARCHAR(100),
+    product VARCHAR(100),
+    quantity INT,
+    order_date DATE
+);
+
+-- Step 2: Insert sample orders
+INSERT INTO orders VALUES
+(1, 'Ananya', 'Laptop', 1, '2024-06-01'),
+(2, 'Ravi', 'Smartphone', 2, '2024-06-05'),
+(3, 'Meera', 'Headphones', 1, '2024-06-07');
+
+-- Step 3: Simulate a backup (exported data)
+-- In a real system, you’d run: mysqldump or export to CSV
+-- Here we SELECT the data to simulate backup
+SELECT * FROM orders;
+
+-- --- Step 4: Simulate failure ---
+-- Drop the table (simulate loss)
+-- DROP TABLE orders;
+
+-- --- Step 5: Restore from backup ---
+-- Recreate the table (structure)
+-- CREATE TABLE orders (...) — same structure as above
+
+-- Reinsert data (restore from backup)
+-- INSERT INTO orders VALUES (...); — same data as above
+
+-- SELECT * FROM orders; — to verify recovery
